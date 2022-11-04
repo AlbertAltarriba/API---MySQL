@@ -1,11 +1,10 @@
 const { executeQuery, executeQueryOne } = require('../helpers/utils');
 
 const getAll = () => {
-    return executeQueryOne('select * from autores');
+    return executeQuery('select * from autores');
 }
 
 const create = ({nombre, email, imagen}) => {
-    console.log('Holi model')
     return executeQuery('insert into autores(nombre, email, imagen) values ( ?, ?, ?)', [nombre, email, imagen]);
 }
 

@@ -16,7 +16,6 @@ router.post('/', async (req, res) => {
 
     try {
         const result = await create (req.body);
-        console.log(result)
         const autor = await getAutorById (result.insertId)
         res.json(autor)
         
